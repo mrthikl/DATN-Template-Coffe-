@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark_light: #656565;
+  --dark_font: #262626;
+  --brown_font: #be9c79;
+  --brown_light: #be9c79;
+  --spacing_sm: 20px;
+  --spacing_md: 40px;
+  --spacing_lg: 60px;
+  --spacing_xl: 80px;
+  --font_heading: "Marcellus", sans-serif;
+  --font_body: "open sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font_body);
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 300;
+  color: var(--dark_light);
+}
+
+h1 {
+  font: 400 28px/38px var(--font_heading);
+}
+
+h2 {
+  font: 400 35px/1.22em var(--font_heading);
+}
+
+h5 {
+  font: 400 18px/1.5em var(--font_heading);
+}
+
+h6 {
+  font: 300 18px/1.55em var(--font_body);
+}
+
+.btn-text {
+  font: 600 14px/1.15em var(--font_body);
+  letter-spacing: 0.15em;
+  cursor: pointer;
+}
+
+.title-text {
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font: 400 68px/78px var(--font_heading);
+  }
+}
