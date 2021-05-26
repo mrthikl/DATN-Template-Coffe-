@@ -1,4 +1,5 @@
 const mediaMax1000 = window.matchMedia("(max-width: 1000px)");
+const mediaMin1024 = window.matchMedia("(min-width: 1024px)");
 
 $(".btnHeader").click(function () {
   $(this).toggleClass("openHamburger");
@@ -13,6 +14,8 @@ const swiper = new Swiper(".swiper-container", {
   effect: "fade",
   parallax: true,
   speed: 800,
+  simulateTouch: false,
+  preventClicks: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: "true",
@@ -22,10 +25,24 @@ const swiper = new Swiper(".swiper-container", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    320: {
+      simulateTouch: false,
+      preventClicks: false,
+    },
+    1024: {
+      simulateTouch: true,
+      preventClicks: true,
+    },
+  },
 });
 
 // Rellax
-var rellax = new Rellax(".rellax");
+var rellax2 = new Rellax(".rellax2");
+if (mediaMin1024.matches) {
+  var rellax = new Rellax(".rellax");
+}
+// rellax.destroy();
 
 // observer API
 const headerSecond = document.querySelector(".headerSecond");

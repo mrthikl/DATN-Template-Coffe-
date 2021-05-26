@@ -157,6 +157,13 @@ header,
   }
 }
 
+header {
+  display: none !important;
+  @media (min-width: 1024px) {
+    display: flex !important;
+  }
+}
+
 .headerSecond {
   position: fixed;
   top: -70px;
