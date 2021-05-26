@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import "./css/header.scss";
+@import "./css/footer.scss";
+@import "./css/hero.scss";
+@import "./css/contentSection.scss";
 * {
   box-sizing: border-box;
 }
@@ -27,6 +31,26 @@ body {
   color: var(--dark_light);
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark_font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 h1 {
   font: 400 28px/38px var(--font_heading);
 }
@@ -37,10 +61,16 @@ h2 {
 
 h5 {
   font: 400 18px/1.5em var(--font_heading);
+  letter-spacing: 1px;
+}
+
+h4 {
+  font: 400 25px/1.33em var(--font_heading);
 }
 
 h6 {
   font: 300 18px/1.55em var(--font_body);
+  letter-spacing: 1px;
 }
 
 .btn-text {
@@ -49,11 +79,84 @@ h6 {
   cursor: pointer;
 }
 
-.title-text {
+.btn-readmore {
+  padding-left: var(--spacing_sm);
+  position: relative;
+  color: var(--dark_font);
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    background: var(--dark_font);
+  }
+}
+
+.btn-style {
+  margin-top: 30px;
+  color: #ffffff;
+  border-color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 20px 45px;
+  letter-spacing: 5px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  // transition: 0.5s ease;
+  // transition-property: background, color;
+}
+
+.flex-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paddingItem {
+  padding: 0 var(--spacing_md) var(--spacing_xl) var(--spacing_md);
+  img {
+    width: auto !important;
+  }
+}
+
+.zero-counter {
+  font: 400 55px/0.9em var(--font_heading);
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: 0.05em;
+  color: var(--brown_light);
+  margin-bottom: var(--spacing_sm);
 }
 
 @media (min-width: 768px) {
   h1 {
     font: 400 68px/78px var(--font_heading);
+  }
+  h2 {
+    font-size: 43px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1500px) {
+  h1 {
+    font-size: 100px;
+    line-height: 110px;
+  }
+  h2 {
+    font-size: 45px;
+  }
+
+  .layoutBlog {
+    grid-template-columns: repeat(4, 1fr) !important;
+    max-width: unset !important;
   }
 }
