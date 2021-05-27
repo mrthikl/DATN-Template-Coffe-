@@ -1,0 +1,115 @@
+footer {
+  background: url(../img/images/home-1-slider-image-2.jpg) center/cover
+    no-repeat;
+  position: relative;
+  background-attachment: fixed;
+  padding: var(--spacing_xl) 15px;
+  color: #fff;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 38, 38, 0.8);
+    z-index: 0;
+  }
+  .top {
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    margin-bottom: var(--spacing_xl);
+    p {
+      margin: 0;
+    }
+    a {
+      color: inherit;
+    }
+    img {
+      width: 160px;
+      height: 75px;
+      margin-bottom: var(--spacing_md);
+    }
+    form {
+      margin-top: 10px;
+      .formField {
+        input {
+          width: 100%;
+          padding: 19px 23px;
+          font-family: inherit;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: inherit;
+          color: #fff;
+          background-color: transparent;
+          border: 1px solid #ccc;
+          border-radius: 0;
+          outline: 0;
+          border-right: none;
+        }
+        button {
+          outline: 0;
+          padding: 12px 15px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .bottom {
+    padding-top: var(--spacing_xl);
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    a {
+      padding: 0 15px;
+      color: inherit;
+      font: 400 15px/26px var(--font_heading);
+      letter-spacing: 0.05em;
+    }
+    .social {
+      margin-top: var(--spacing_sm);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .top {
+      form {
+        .formField {
+          input {
+            width: 300px;
+            margin-right: -10px;
+          }
+        }
+      }
+    }
+    .bottom {
+      ul {
+        display: flex;
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    padding-bottom: 0;
+    &:after {
+      content: "";
+      background: rgb(255, 255, 255, 0.5);
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 135px;
+    }
+
+    .bottom {
+      padding: var(--spacing_md) var(--spacing_md);
+      flex-direction: row;
+      justify-content: space-between !important;
+      .social {
+        margin-top: 0;
+      }
+    }
+  }
+}
